@@ -1,0 +1,293 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-font: 'Helvetica Now Display';
+}
+
+.cardBg1 {
+  /*background: red;*/
+  /*background-image:  linear-gradient(135deg, #000000 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, #000000 100%);*/
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--primary-font), sans-serif;
+  --font-mono: var(--primary-font), sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*--background: #0a0a0a;*/
+    /*--foreground: #ededed;*/
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--primary-font), sans-serif;
+}
+
+.questin_bg {
+  background-image: url('../../public/assets/services/bg-question.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service_background {
+  background-image: url('../../public/assets/services/services-background.png');
+  background-size: 100% 100%;
+}
+
+.contect_left_bg {
+  background-image: url('../../public/assets/services/ccontct-left-card-bg.png');
+  background-size: 100% 100%;
+}
+
+.contect_right_bg {
+  background-image: url('../../public/assets/services/ccontct-right-card-bg.png');
+  background-size: 100% 100%;
+}
+
+.scroll_inner {
+  display: inline-flex;
+  gap: 64px;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll_item img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.clients_slide .swiper-slide {
+  height: auto !important;
+}
+.home_pegination.swiper > .swiper-pagination,
+.clients_slide > .swiper > .swiper-pagination{
+bottom: 20px;
+}
+.cardBg {
+  height: 100% !important;
+}
+
+.side_nav.active {
+  margin: 0px !important;
+  left: 0px !important;
+  transition: 0.3s;
+}
+
+.pagination_hide .swiper-pagination {
+  display: none !important;
+}
+.Team_slider .swiper-wrapper{
+/* justify-content: center; */
+}
+
+
+@media (max-width: 962px) {
+  .side_nav {
+    padding: 50px 20px 0px;
+    position: fixed;
+    left: -250px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-image: linear-gradient(to right, #215148, #1e453f, #132e33);
+    /* filter: blur(200px); */
+    height: calc(100% - 85px) !important;
+    width: 250px;
+    margin: -250px;
+    gap: 20px;
+
+  }
+
+  .flex_add {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .side_nav div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu_button {
+    display: block !important;
+  }
+
+  .pagination_hide .swiper-pagination {
+    position: relative !important;
+    display: flex !important;
+  }
+}
+@media (max-width: 678px){
+  .side_nav{ height: calc(100% - 77px) !important;}
+}
+.mySwiper.swiper-grid>.swiper-wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.conversation-container {
+  scrollbar-width: none;
+  scrollbar-color: #36C1B1 transparent;
+}
+
+.youtube_border {
+  background-image: url('/public/assets/images/borderline5.png');
+  height: 100% !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.content_text h1,
+.content_text h2,
+.content_text h3,
+.content_text h4,
+.content_text h5,
+.content_text h6{
+font-weight: 700;
+font-size: 24px;
+line-height: 22px;
+margin-bottom: 25px;
+}
+
+.content_text.privacy_policy h1,.content_text.privacy_policy h2,.content_text.privacy_policy h3,.content_text.privacy_policy h4,.content_text.privacy_policy h5,.content_text.privacy_policy h6{
+  font-weight: 700;
+  font-size: revert !important;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.content_text.privacy_policy h6{
+  font-weight: normal !important;
+  font-size: 18px !important;
+  margin-bottom: 0px !important;
+}
+.content_text ul{
+  list-style: disc;
+  padding-left: 20px;
+}
+.content_text a{
+  color: #2166DF;
+}
+.content_text pre,
+.content_text pre code{
+  white-space: pre-line !important;
+}
+
+.privacy_policy * {
+  background-color: transparent !important;
+}
+.privacy_policy ul{
+  padding: 0px 0px 0px 30px;
+}
+.privacy_policy .table{
+ overflow-x: scroll;
+  width: 100% !important;
+}
+.privacy_policy  table{
+  max-width: 1000px;
+  width: 100% !important;
+}
+
+.content_text.privacy_policy a{
+  color: #36C1B1;
+}
+.content_text p, .content_text ul,.content_text ol {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 25px;
+  }
+  .content_text img{
+    width: 100% !important;
+    border-radius: 20px;
+    max-height: 441px !important;
+    object-fit: cover;
+    margin-top: 17px;
+  }
+  .content_text ul li,.content_text ol li{
+    margin-bottom: 5px;
+  }
+  .content_text hr{
+    margin: 10px 0 15px;
+  }
+
+  .service_text ul li,.service_text ol li{
+    line-height: 30px;
+    font-size: 18px;
+    color: #fffc;
+  }
+
+
+
+  
+  .contact_service_select .css-1dyz3mf .css-1p3m7a8-multiValue {
+    background-color: #2166DF;
+    border-radius: 100px;
+    padding: 0px 0px 0px 10px;
+  }
+  .contact_service_select.css-t3ipsp-control,
+  .contact_service_select.css-t3ipsp-control:hover{
+    box-shadow: 0 0 0 1px #36C1B1 !important;
+  }
+  .contact_service_select .css-1dyz3mf {
+    padding: 0px !important;
+  }
+  .contact_service_select .css-1dyz3mf .css-1p3m7a8-multiValue .css-9jq23d{
+    color: white !important;
+    cursor: pointer;
+  }
+  .css-b62m3t-container .css-1nmdiq5-menu{
+    background-color: #1F3E48 !important;
+  }
+  .css-b62m3t-container .css-1nmdiq5-menu .css-qr46ko .css-d7l1ni-option{
+    background-color: transparent !important;
+  }
+  .css-1jqq78o-placeholder{
+    color: #8c9ba4 !important;
+  }
+  .contact_service_select.css-t3ipsp-control .css-1wy0on6 .css-1xc3v61-indicatorContainer,
+  .contact_service_select.css-t3ipsp-control .css-1wy0on6 .css-1xc3v61-indicatorContainer:hover,
+  .contact_service_select .css-v7duua,
+  .contact_service_select .css-v7duua:hover{
+    background-color: transparent !important;
+    color: #fff;
+  }
+  .css-1wy0on6 {
+    align-items: start !important;
+  }
+  .contact_service_select .css-tj5bde-Svg {
+    fill: #fff !important;
+  }
+  
+  
+  .contact_service_select .css-1u9des2-indicatorSeparator{
+    display: none;
+  }
+
+
+
