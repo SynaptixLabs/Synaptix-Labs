@@ -207,30 +207,32 @@ export function HeroSection() {
       </div>
 
       {/* Stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center gap-12 py-8 sm:gap-20 bg-gradient-to-t from-void to-transparent">
-        {STATS.map((s) => (
-          <div key={s.label} className="text-center">
-            <div className="text-gradient font-mono text-lg font-bold sm:text-xl">
-              {s.value}
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-void to-transparent px-4 py-6 sm:py-8">
+        <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-12 md:gap-x-20">
+          {STATS.map((s) => (
+            <div key={s.label} className="text-center">
+              <div className="text-gradient font-mono text-base font-bold sm:text-xl">
+                {s.value}
+              </div>
+              <div className="mt-1 text-[10px] text-text-muted sm:text-xs">{s.label}</div>
             </div>
-            <div className="mt-1 text-xs text-text-muted">{s.label}</div>
-          </div>
-        ))}
+          ))}
 
-        {/* Founder */}
-        <div className="flex items-center gap-2.5">
-          <Image
-            src={FOUNDER_AVATAR}
-            alt="Avidor Rabinovich"
-            width={36}
-            height={36}
-            className="rounded-full ring-1 ring-border"
-          />
-          <div className="text-left">
-            <div className="text-gradient font-mono text-sm font-bold sm:text-base">
-              Avidor Rabinovich
+          {/* Founder */}
+          <div className="flex items-center gap-2.5">
+            <Image
+              src={FOUNDER_AVATAR}
+              alt="Avidor Rabinovich"
+              width={36}
+              height={36}
+              className="rounded-full ring-1 ring-border"
+            />
+            <div className="text-left">
+              <div className="text-gradient font-mono text-sm font-bold sm:text-base">
+                Avidor Rabinovich
+              </div>
+              <div className="text-[10px] text-text-muted sm:text-xs">Founder</div>
             </div>
-            <div className="text-xs text-text-muted">Founder</div>
           </div>
         </div>
       </div>

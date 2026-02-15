@@ -41,13 +41,13 @@ export function Footer() {
     >
       <div className="mx-auto max-w-6xl px-6">
         {/* Link grid */}
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-8 text-center sm:grid-cols-3 sm:text-left">
           {COLUMNS.map((col) => (
             <div key={col.heading}>
               <h4 className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-text-muted">
                 {col.heading}
               </h4>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col items-center gap-2 sm:items-start">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     {"action" in link && link.action === "contact" ? (
