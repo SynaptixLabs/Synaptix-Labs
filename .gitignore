@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+/blob-report/
 
 # next.js
 /.next/
@@ -40,4 +43,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .idea
+
+# claude code
+.claude/
+
+# windows artifacts
+nul
 

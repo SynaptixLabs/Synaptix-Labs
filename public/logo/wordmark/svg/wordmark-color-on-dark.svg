@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="112" viewBox="0 0 480 56" fill="none">
+  <rect width="480" height="56" fill="#09090B"/>
+  <defs>
+    <linearGradient id="wag" x1="8" y1="42" x2="42" y2="8" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#F97316"/>
+    <stop offset="45%" stop-color="#FB923C"/>
+    <stop offset="100%" stop-color="#38BDF8"/>
+  </linearGradient>
+    <filter id="wgw" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="2.5"/>
+    <feFlood flood-color="#F97316" flood-opacity="0.4"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+    <filter id="wgc" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="2.5"/>
+    <feFlood flood-color="#38BDF8" flood-opacity="0.4"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  </defs>
+  <g transform="translate(24, 28)">
+    <path d="M -14 14 C -14 2, 12 8, 0 0 C -12 -8, 14 -2, 14 -14"
+      stroke="url(#wag)" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <circle cx="0" cy="0" r="1.3" fill="#FAFAFA" opacity="0.6"/>
+    <circle cx="-14" cy="14" r="5.5" fill="#F97316" filter="url(#wgw)"/>
+    <circle cx="-14" cy="14" r="1.8" fill="#FAFAFA" opacity="0.95"/>
+    <circle cx="14" cy="-14" r="5.5" fill="#38BDF8" filter="url(#wgc)"/>
+    <circle cx="14" cy="-14" r="1.8" fill="#FAFAFA" opacity="0.95"/>
+  </g>
+  <line x1="54" y1="8" x2="54" y2="48" stroke="#27272A" stroke-width="1"/>
+  <text x="66" y="36" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20" letter-spacing="0.03em" fill="#FAFAFA">SynaptixLabs</text>
+</svg>

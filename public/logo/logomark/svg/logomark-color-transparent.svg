@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="ag" x1="30" y1="130" x2="130" y2="30" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#F97316"/>
+    <stop offset="45%" stop-color="#FB923C"/>
+    <stop offset="100%" stop-color="#38BDF8"/>
+  </linearGradient>
+    <filter id="gw" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="7"/>
+    <feFlood flood-color="#F97316" flood-opacity="0.4"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+    <filter id="gc" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="7"/>
+    <feFlood flood-color="#38BDF8" flood-opacity="0.4"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+    <filter id="ga" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="4"/>
+    <feFlood flood-color="#FB923C" flood-opacity="0.15"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  </defs>
+  <!-- Ambient halos -->
+  <circle cx="36" cy="124" r="28" fill="#F97316" opacity="0.03"/>
+  <circle cx="124" cy="36" r="28" fill="#38BDF8" opacity="0.03"/>
+  <!-- S-shaped arc -->
+  <path d="M 36 124 C 36 84, 120 106, 80 80 C 40 54, 124 76, 124 36" stroke="url(#ag)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#ga)" opacity="0.85"/>
+  <!-- Ghost echo -->
+  <path d="M 40 120 C 40 86, 116 104, 80 80 C 44 56, 120 74, 120 40" stroke="url(#ag)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.2" stroke-dasharray="4 8"/>
+  <!-- Energy pulse -->
+  <circle cx="80" cy="80" r="3" fill="#FAFAFA" opacity="0.85"/>
+  <circle cx="80" cy="80" r="10" fill="#FB923C" opacity="0.04"/>
+  <!-- Warm node -->
+  <circle cx="36" cy="124" r="14" fill="#F97316" opacity="0.08"/>
+  <circle cx="36" cy="124" r="7.5" fill="#F97316" filter="url(#gw)"/>
+  <circle cx="36" cy="124" r="2.5" fill="#FAFAFA" opacity="0.95"/>
+  <!-- Cool node -->
+  <circle cx="124" cy="36" r="14" fill="#38BDF8" opacity="0.08"/>
+  <circle cx="124" cy="36" r="7.5" fill="#38BDF8" filter="url(#gc)"/>
+  <circle cx="124" cy="36" r="2.5" fill="#FAFAFA" opacity="0.95"/>
+</svg>
