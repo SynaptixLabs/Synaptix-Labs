@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 160 160" fill="none">
+  <rect width="160" height="160" fill="#FAFAFA"/>
+  <defs>
+    <linearGradient id="ag" x1="30" y1="130" x2="130" y2="30" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#EA580C"/>
+    <stop offset="45%" stop-color="#F97316"/>
+    <stop offset="100%" stop-color="#0284C7"/>
+  </linearGradient>
+    <filter id="gw" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="6"/>
+    <feFlood flood-color="#EA580C" flood-opacity="0.25"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+    <filter id="gc" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="6"/>
+    <feFlood flood-color="#0284C7" flood-opacity="0.25"/>
+    <feComposite in2="SourceGraphic" operator="in"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  </defs>
+  <path d="M 36 124 C 36 84, 120 106, 80 80 C 40 54, 124 76, 124 36" stroke="url(#ag)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M 40 120 C 40 86, 116 104, 80 80 C 44 56, 120 74, 120 40" stroke="url(#ag)" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.15" stroke-dasharray="4 8"/>
+  <circle cx="80" cy="80" r="2.5" fill="#F97316" opacity="0.4"/>
+  <circle cx="36" cy="124" r="12" fill="#EA580C" opacity="0.05"/>
+  <circle cx="36" cy="124" r="7.5" fill="#EA580C" filter="url(#gw)"/>
+  <circle cx="36" cy="124" r="2.5" fill="#FAFAFA"/>
+  <circle cx="124" cy="36" r="12" fill="#0284C7" opacity="0.05"/>
+  <circle cx="124" cy="36" r="7.5" fill="#0284C7" filter="url(#gc)"/>
+  <circle cx="124" cy="36" r="2.5" fill="#FAFAFA"/>
+</svg>
