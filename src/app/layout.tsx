@@ -38,6 +38,19 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SynaptixLabs" }],
   creator: "SynaptixLabs",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo/favicon/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo/favicon/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo/favicon/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/logo/favicon/favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/logo/favicon/favicon-32.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "256x256", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "SynaptixLabs — AI-Native Products & Advisory",
     description:
@@ -46,12 +59,21 @@ export const metadata: Metadata = {
     siteName: "SynaptixLabs",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SynaptixLabs — AI-Native Products & Advisory",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SynaptixLabs — AI-Native Products & Advisory",
     description:
       "We create products that think & evolve. Intelligence that lives, learns, and creates.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
